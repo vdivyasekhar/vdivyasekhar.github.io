@@ -1,59 +1,622 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Dr. Divya Sekhar Vaka </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
-        /* Add some basic styling */
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
+            font-family: 'Red Hat Display', sans-serif;
+            color: black;
         }
-        nav {
-            background-color: #f4f4f4;
-            padding: 10px;
-            margin-bottom: 20px;
+
+        p {
+            text-align: justify;
         }
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
+
+        h1 {
+            color: #05386B;
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #006241;
+            font-family: 'Red Hat Display', sans-serif;
+            font-weight: 500;
+        }
+
+        section {
+            padding: 25px;
+        }
+
+        .dot {
+            height: 30px;
+            width: 30px;
+            margin: 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #006241;
+            font-weight: bold;
+        }
+
+        #scrollspy {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        .dot {
+            display: block;
+            width: 10px;
+            height: 10px;
+            margin: 20px 0;
+            border-radius: 50%;
+            background-color: #d4e9e2;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .dot.active {
+            background-color: #006241;
         }
     </style>
 </head>
-<body>
 
-<!-- Navigation Bar -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="academics.html">Academics</a>
-    <a href="publications.html">Publications</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<body data-spy="scroll" data-target="#scrollspy" data-offset="100">
 
-<!-- Introduction Page -->
-<section id="introduction">
-    <h1>Welcome to My Website</h1>
-    <p>This is the introduction page. Here you can provide a brief introduction about yourself or your website.</p>
-</section>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-dark py-3" style="background-color: #05386B;">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#">Dr. Divya Sekhar Vaka</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto text-white">
+                        <li class="nav-item active">
+                            <a class="nav-link text-reset" href="#section1">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-reset" href="#section2">Education</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-reset" href="#section3">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-reset" href="#section4">Awards & Activities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-reset" href="#section5">Publications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-reset" href="#section6">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--
+    <div class="container">
 
-<!-- Academics Page -->
-<section id="academics">
-    <h1>Academics</h1>
-    <p>This is the academics page. You can list your academic achievements, courses, or any related information here.</p>
-</section>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/image1.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>2019 Mirpur Earthquake</h5>
+                        <p>Wrapped and Unwrapped Phase</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/c1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/c1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    -->
+    <div class="container">
 
-<!-- Publications Page -->
-<section id="publications">
-    <h1>Publications</h1>
-    <p>This is the publications page. You can list your publications, articles, or any research work here.</p>
-</section>
+        <main>
+            <section id="section1">
 
-<!-- Contact Page -->
-<section id="contact">
-    <h1>Contact</h1>
-    <p>This is the contact page. You can provide a form or contact information for visitors to reach out to you.</p>
-</section>
+                <h1>Dr. Divya Sekhar Vaka</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-3 d-sm-none d-md-block">
+                        <div class="text-center ">
+                            <img src="./images/profile_photo.JPG" class="rounded" alt="...">
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <p> I am a doctoral graduate from IIT Bombay, specializing in Synthetic Aperture Radar (SAR)
+                            data
+                            analysis,
+                            with an emphasis on leveraging Earth Observation (EO) data for surface deformation studies.
+                            My academic journey has equipped me with advanced expertise in remote sensing techniques
+                            and their applications in environmental monitoring and hazard analysis. </p>
+
+                        <p> Before embarking on my doctoral studies, I garnered valuable industry experience as a
+                            Software Analyst at Hexagon Geospatial, where I honed my analytical
+                            skills and gained practical insights into geospatial technologies.</p>
+
+                        <p> Passionate about harnessing technology and data-driven approaches,
+                            I am enthusiastic about exploring opportunities that allow me to apply my expertise, drive
+                            impactful
+                            projects,
+                            and contribute to the advancement of remote sensing applications in
+                            disaster management, infrastructure assessment, and environmental sustainability. </p>
+                    </div>
+                </div>
+                <h2> Research Interests </h2>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item py-4 bg-primary-subtle">
+                                <b style="color:#1e3932;" class="fs-5"> Remote Sensing
+                                </b>
+                                <br>Land Use-Land Change (LULC)
+                                <br> Change Detection
+                                <br>Supervised and Unsupervised Image Classification
+                                <br> Coastal Zone Vulnerability
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item py-4 bg-warning-subtle">
+                                <b style="color:#1e3932;" class="fs-5"> Synthetic Aperture Radar Interferometry
+                                    (InSAR)</b>
+                                <br> Land Subsidence (Urban)
+                                <br> Earthquake Deformation (Pre, Co, and Post-Seismic)
+                                <br> Landslides
+                                <br> Glacier Velocity Estimation
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row g-3 py-3">
+                    <div class="col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item py-4 bg-success-subtle">
+                                <b style="color:#1e3932;" class="fs-5"> Geophysical Modelling</b>
+                                <br>Source Parameter Estimation
+                                <br>Surface Subsidence due to Groundwater Variations
+                                <br>
+                                <br>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-group">
+
+                            <li class="list-group-item py-4 bg-danger-subtle">
+                                <b style="color:#1e3932;" class="fs-5"> Disaster Management</b>
+                                <br> Disaster Extent Mapping and Monitoring
+                                <br> Disaster Risk Reduction (DRR) and Mitigation
+                                <br> Hazard, Risk and Vulnerability (HRV) Analysis
+                                <br>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Technical Skills</h2>
+
+                <ul class="list">
+                    <li class="list-item">
+                    <p> <b>Programming Skills:</b> MATLAB, Python</p>
+                    </li>
+                    <li class="list-item">
+                        <p><b>Software and Tools:</b> Jupyter Notebooks, GMTSAR, StaMPS, ISCE, ArcMap, ERDAS Imagine,
+                        ENVI, SNAP</p>
+                    </li>
+                    <li class="list-item">
+                    <p><b>Cloud Platforms:</b> Google Earth Engine, ESA RSS CloudToolbox, ASF OpenSARlab</p>
+                    </li>
+                </ul>
+
+
+
+
+
+
+
+
+            </section>
+
+            <section id="section2">
+                <h1>Education</h1>
+                <hr>
+                <ul class="list-group">
+                    <li class="list-group-item py-4">
+                        <b style="color:#006241;" class="fs-5"> Ph.D. - Geoinformatics and Natural Resources Engineering
+                        </b>
+                        <br><b style="color:#1e3932;"> Indian Institute of Technology Bombay, Mumbai </b>
+                        <br>2016 — 2022
+                        <br>Thesis: Studies on Land Surface Deformation Mapping using Interferometric Synthetic Aperture
+                        Radar
+                        Time Series Techniques
+                        <br>Supervisor: Prof. Y. S. Rao ⋆ CPI: 8.1/10.0
+
+                    </li>
+                    <li class="list-group-item py-4">
+                        <b style="color:#006241;" class="fs-5"> M.Tech. - Remote Sensing </b>
+                        <br><b style="color:#1e3932;"> Andhra University, Visakhapatnam </b>
+                        <br>2012-2015
+                        <br>Project: Generation of Land-use Plans for Sustainable Resource Development using Remote
+                        Sensing
+                        and
+                        GIS
+                        <br>Supervisor: Prof. G. Jai Sankar ⋆ CGPA: 8.9/10.0 (First Class with Distinction)
+                    </li>
+                    <li class="list-group-item py-4">
+                        <b style="color:#006241;" class="fs-5"> B.Tech. - Electronics and Communication Engineering
+                            (ECE) </b>
+                        <br><b style="color:#1e3932;"> Jawaharlal Nehru Technological University, Kakinada </b>
+                        <br>2008 — 2012
+                        <br>Project: Remote Monitoring of Weather Parameters using Vaisala Weather Transmitter WXT510
+                        <br>Supervisor: Prof. G. Suresh ⋆ Percentage: 75.48% (First Class with Distinction)
+                    </li>
+                </ul>
+
+
+
+
+
+            </section>
+
+            <section id="section3">
+                <h1>Experience</h1>
+                <hr>
+                <ul class="list-group">
+                    <li class="list-group-item py-4">
+                        <b style="color:#006241;" class="fs-5">Teaching Assistant</b>
+                        <br><b style="color:#1e3932;"> Indian Institute of Technology Bombay, Mumbai </b>
+                        <br>July 2016 — July 2021
+                        <br>&#9733 <b>PG level courses:</b>
+                        <br>GNR 647-Microwave Remote Sensing;
+                        <br>GNR 653-Data Analysis Methods for Geospatial Applications;
+                        <br> GNR 621-Natural Resources: Hydrosphere, Cryosphere, and Atmosphere;
+                        <br> GNR 617- Image Interpretation Lab.
+                        <br>&#9733 <b>Ph.D. level course:</b> <br> GNR 805-Advanced Concepts in Polarimetric SAR Image
+                        Analysis.
+                    </li>
+
+                    <li class="list-group-item py-4">
+                        <b style="color:#006241;" class="fs-5">Software Analyst</b>
+                        <br><b style="color:#1e3932;"> Hexagon Capability Center India Pvt. Ltd., Hyderabad</b>
+                        <br>November 2014 — January 2016
+
+                        <br>&#9733 Responsible for Quality Assurance and Quality Control of GeoMedia Suite of Products.
+                        <br>&#9733 Pat on the Back award in Hexagon Geospatial Division for rigorous testing and timely
+                        integration of raster engine into the product.
+
+                    </li>
+
+                    <li class="list-group-item py-4">
+                        <b style="color:#006241;" class="fs-5">Project Research Associate</b>
+                        <br><b style="color:#1e3932;"> CGARD, National Institute of Rural Development & Panchayati Raj,
+                            Hyderabad</b>
+                        <br>February 2014 — September 2014
+                    </li>
+
+                    <li class="list-group-item py-4">
+                        <b style="color:#006241;" class="fs-5">Project Trainee</b>
+                        <br><b style="color:#1e3932;"> Electronic Corporation of India Limited (ECIL), Hyderabad </b>
+                        <br>February 2012
+                    </li>
+
+                    <li class="list-group-item py-4">
+                        <b style="color:#006241;" class="fs-5">Project Trainee</b>
+                        <br><b style="color:#1e3932;"> Visakhapatnam Steel Plant (RINL), Visakhapatnam </b>
+                        <br>May 2011
+                    </li>
+                </ul>
+            </section>
+
+            </section>
+
+            <section id="section4">
+                <h1>Awards and Synergistic Activities</h1>
+
+                <hr>
+                <h2>Awards</h2>
+                <ul class="list">
+                    <li class="list-item">
+                        <p style="color:#1e3932;" class="fs-6">Best Paper Award in IEEE India Geoscience and Remote
+                            Sensing Symposium (InGARSS 2020) conference</p>
+                    </li>
+                    <li class="list-item">
+                        <p style="color:#1e3932;" class="fs-6">MHRD Fellowship and Institute Teaching Assistantship
+                            during M.Tech. and Ph.D., respectively.</p>
+                    </li>
+                    <li class="list-item">
+                        <p style="color:#1e3932;" class="fs-6">Central Sector Scholarship for College and University
+                            Students by MHRD during B.Tech.</p>
+                    </li>
+                    <li class="list-item">
+                        <p style="color:#1e3932;" class="fs-6">Pat on the Back award for best performers in Hexagon
+                            Geospatial Division for rigorous testing and
+                            timely integration of raster engine into the product.</p>
+                    </li>
+                </ul>
+
+                <h2>Travel Grants</h2>
+                <ul class="list">
+                <li class="list-item">
+                    <p style="color:#1e3932;" class="fs-6">Institute (IIT Bombay) Travel Grant for attending
+                        International Conference IEEE IGARSS 2018 in Valencia, Spain
+                    </p>
+                </li>
+                <li class="list-item">
+                    <p style="color:#1e3932;" class="fs-6">IEEE GRSS Travel Grant for attending InGARSS 2023 in
+                        Bangalore, India
+                    </p>
+                </li>
+                </ul>
+
+                <h2>Synergistic Activities</h2>
+                <ul class="list">
+                    <li class="list-item">
+                        <p style="color:#1e3932;" class="fs-6">Journal Reviewer: <br> Acta Geodetica et Geophysica
+                            (Springer), Environmental Science and Pollution Research (Springer), Geocarto
+                            International (Taylor & Francis), Remote Sensing Letters (Taylor & Francis), The Imaging
+                            Science Journal (Taylor & Francis)</p>
+                    </li>
+                    <li class="list-item">
+                        <p style="color:#1e3932;" class="fs-6">Professional Memberships: <br>
+                            Indian Society of Remote Sensing (Life Member), IEEE (Member), IEEE Geoscience and Remote
+                            Sensing Society
+                            (Member), IEEE Young Professionals (Member)</p>
+
+                    </li>
+                </ul>
+
+                
+            </section>
+
+            <section id="section5">
+                <h1>Publications</h1>
+                <hr>
+                <h2>Journals</h2>
+
+                <ol class="list">
+                    <li class="list-item p-2">Vaka, D. S., Rao, Y. S., and Bhattacharya, A., Surface Displacements of
+                        the 12
+                        November
+                        2017 Iran Iraq Earthquake derived using SAR Interferometry. Geocarto International, pp.1-14,
+                        2019.
+                    </li>
+                    <li class="list-item p-2">Devaraj, S., Yarrakula, K., Martha, T.R., Murugesan, G.P., Vaka, D. S.,
+                        Surampudi,
+                        S.,
+                        Wadhwa, A., Loganathan, P., and Budamala, V., Time series SAR interferometry approach for
+                        landslide
+                        identification in mountainous areas of Western Ghats, India. Journal of Earth System Science
+                        131,
+                        133 (2022).
+                    </li>
+                    <li class="list-item p-2">Vaka, D. S., Rao, Y. S., and Bhattacharya, A., Time series analysis of the
+                        preseismic
+                        and postseismic surface deformation of the 2017 Iran-Iraq earthquake derived from Sentinel-1
+                        InSAR
+                        data. Journal of Earth System Science (2023).
+                    </li>
+
+                </ol>
+
+                <h2>Preprints</h2>
+                <ol class="list">
+
+                    <li class="list-item p-2">Mandal, D., Vaka, D.S., Bhogapurapu, N.R., Vanama, V.S.K., Kumar, V., Rao,
+                        Y.S.,
+                        Bhattacharya, A., Sentinel-1 SLC PreprocessingWorkflow for Polarimetric Applications: A Generic
+                        Practice for Generating Dual-pol Covariance Matrix Elements in SNAP S-1 Toolbox. Preprints 2019,
+                        2019110393. </li>
+                </ol>
+                <h2>International / National Conference Proceedings (Peer-Reviewed) </h2>
+                <ol class="list">
+
+                    <li class="list-item p-2">D. S. Vaka, and Y. S. Rao, Mapping Land Subsidence in Hyderabad through
+                        InSAR Time
+                        series Analysis on the Cloud-based OpenSARLab Platform, 2023 IEEE India Geoscience and Remote
+                        Sensing Symposium (InGARSS), 2023 (Accepted & Presented) </li>
+                    <li class="list-item p-2">D. S. Vaka, Y. S. Rao and T. Singh, Surface Deformation of The 2019 Mirpur
+                        Earthquake
+                        Estimated from Sentinel-1 InSAR Data, 2020 IEEE India Geoscience and Remote Sensing Symposium
+                        (InGARSS), 2020, pp. 130-133. <b style="color:red;">(Best Paper Award)</b></li>
+                    <li class="list-item p-2">D. S. Vaka, V. Kumar, Y. S. Rao and R. Deo, Comparison of Various DEMs for
+                        Height
+                        Accuracy Assessment Over Different Terrains of India, IGARSS 2019 - 2019 IEEE International
+                        Geoscience and Remote Sensing Symposium, Yokohama, 2019. </li>
+                    <li class="list-item p-2">Vaka, D. S., and Rao, Y. S., Vertical Accuracy Assessment of TanDEM-X
+                        Global DEM
+                        over
+                        various Indian Terrains, URSI Asia Pacific Radio Science Conference, New Delhi, India, 2019.
+                    </li>
+                    <li class="list-item p-2">Vaka, D. S., and Rao, Y. S., Earthquake Displacement Mapping using
+                        Interferometric
+                        Synthetic Aperture Radar, in Ananda Babu (Ed.), Fourth WCDM. Vol. 3 (pp. 226), Macmillan
+                        Publishers
+                        India Private Limited, ISBN-13: 978-9354552885</li>
+                    <li class="list-item p-2">Ittycheria, N., Vaka, D. S., and Rao, Y. S., Time Series Analysis of
+                        Surface
+                        Deformation of Bengaluru City using Sentinel-1 images, ISPRS Ann. Photogramm. Remote Sens.
+                        Spatial
+                        Inf. Sci., IV-5, 473-477, 2018. </li>
+                    <li class="list-item p-2">Lal, P., Vaka, D. S., and Rao, Y. S., Mapping Surface Flow Velocities of
+                        Siachen
+                        and
+                        Gangotri Glaciers using TerraSAR-X and Sentinel-1A Data by Intensity Tracking, ISPRS Ann.
+                        Photogramm. Remote Sens.Spatial Inf. Sci., IV-5, 325-329, 2018. </li>
+                    <li class="list-item p-2">D. S. Vaka and Y. S. Rao, Deformation of Bhuj Earthquake Area Obtained
+                        with
+                        Persistent
+                        Scatterer Interferometric Analysis of Alos L-Band Sar Data, IGARSS 2018 - 2018 IEEE
+                        International
+                        Geoscience and Remote Sensing Symposium, Valencia, 2018, pp. 513-516. </li>
+                    <li class="list-item p-2">Vaka, D. S., S. Sharma, and Rao, Y.S., Comparison of HH and VV
+                        Polarizations for
+                        Deformation Estimation using Persistent Scatterer Interferometry, ACRS 2017 - 38th Asian
+                        Conference
+                        on Remote Sensing,New Delhi, 2017. </li>
+                    <li class="list-item p-2">Kumar, L. R., Vaka, D. S., Rao, Y. S., Mapping Land Subsidence of
+                        Krishna-Godavari
+                        Basin using Persistent Scatterer Interferometry (PSI) Technique, ACRS 2017 - 38th Asian
+                        Conference
+                        on Remote Sensing, New Delhi, 2017. </li>
+                </ol>
+                <h2>Conference Abstracts/Presentations </h2>
+                <ol class="list">
+
+                    <li class="list-item p-2">S. R. Chowdhury, S. Mishra, D. S. Vaka,, S. Maurya, Y. S. Rao, Deformation
+                        Mapping
+                        in
+                        Joshimath: A Comparative Study of InSAR Time Series Analysis With LiCSBAS, OpenSARLab, and
+                        StaMPS.
+                        ISRS-ISG National Symposium, Pune, 2023. </li>
+                    <li class="list-item p-2">C. Ojha, D. S. Vaka, A. Pepe, Y. S. Rao, Investigating Land Subsidence
+                        Exploring
+                        Sentinel-1 Data Using MT-InSAR Technique Over Mumbai City, India. AOGS 2023, Singapore. </li>
+                    <li class="list-item p-2">D. S. Vaka, T. Singh, and Y. S. Rao, InSAR surface deformation, geological
+                        structure
+                        and fault model of the 2019 Mirpur earthquake. XXI INQUA Congress 2023, Rome, Italy. </li>
+                    <li class="list-item p-2">Rao, Y.S., Vaka, D.S., Ojha, C., Monitoring Slow Landslide Movement along
+                        the
+                        Northern
+                        Railway Track in Jammu & Kashmir using SAR Interferometry, ISRS-ISG National Symposium,
+                        Hyderabad,
+                        2022. </li>
+                    <li class="list-item p-2">D. S. Vaka, Y. S. Rao, C. Ojha and V. Kumar, Mapping land subsidence in
+                        Mumbai by
+                        Sentinel-1 InSAR time-series, FRINGE 2021. </li>
+                    <li class="list-item p-2">S. Koleshwar, D. S. Vaka, Y. S. Rao. Ground Based Synthetic Aperture Radar
+                        Data
+                        Processing, National Symposium on Innovations in Geospatial Technology for Sustainable
+                        Development
+                        with special emphasis on NER, NESAC-Meghalaya, 2019. </li>
+                    <li class="list-item p-2">Lal, P., Vaka, D. S., Rao, Y. S., Kumar, A. Glacier Velocity Mapping using
+                        Sentinel-2
+                        and Landsat-8 OLI Satellite Imaging System, International Conference on Environmental Challenges
+                        and
+                        Sustainability 2018, CUJ, Ranchi, India. </li>
+                    <li class="list-item p-2">Y. S. Rao, V. Kumar, D. S. Vaka, R. Deo, Vertical accuracy assessment of
+                        TanDEM-X
+                        WorldDEM using DGPS measurements over different terrains of India, CEOSWorking Group on
+                        Calibration
+                        and Validation (WGCV) Workshop 2017, JPL, California, USA. </li>
+
+
+
+            </section>
+
+            <section id="section6">
+                <h1>Contact</h1>
+                <hr>
+                <p> Dr. Divya Sekhar Vaka
+                    <br>Email (Personal): vdivyasekhar@gmail.com
+                    <br> Email (Work): sekharv@iitb.ac.in
+                </p>
+            </section>
+        </main>
+
+
+        <div id="scrollspy">
+            <a href="#section1" class="dot"></a>
+            <a href="#section2" class="dot"></a>
+            <a href="#section3" class="dot"></a>
+            <a href="#section4" class="dot"></a>
+            <a href="#section5" class="dot"></a>
+            <a href="#section6" class="dot"></a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        // Add active class to the current dot when the corresponding section is in view
+        window.addEventListener('scroll', function (event) {
+            var sections = document.getElementsByTagName('section');
+            for (var i = 0; i < sections.length; i++) {
+                var section = sections[i];
+                var dot = document.getElementsByClassName('dot')[i];
+                var position = section.getBoundingClientRect();
+                if (position.top <= 150 && position.bottom >= 150) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            }
+        });
+
+        // Smooth scroll to section when dot is clicked
+        var dots = document.getElementsByClassName('dot');
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].addEventListener('click', function (event) {
+                event.preventDefault();
+                var target = this.getAttribute('href'); // Get the target section ID from the dot's href attribute
+                var section = document.querySelector(target); // Find the corresponding section using the target ID
+                section.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        }
+    </script>
 
 </body>
+
 </html>
